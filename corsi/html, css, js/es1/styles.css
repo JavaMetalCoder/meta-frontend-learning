@@ -1,0 +1,213 @@
+/* 🟢 1. Immagine fluida base
+Obiettivo: Rendere un'immagine responsive in una pagina HTML.
+
+✅ Crea un file HTML con un’immagine molto grande.
+🎯 Usa max-width: 100% e height: auto per farla adattare allo schermo. */
+
+/* img {
+  max-width: 100%;
+  height: auto;
+} */
+
+/* 🟢 2. Layout con griglia flessibile
+Obiettivo: Usare le griglie flessibili con le percentuali.
+
+✅ Crea 3 colonne affiancate in un contenitore.
+🎯 Usa display: flex o float con larghezze in % (es: 33.33%).
+📱 Verifica che si adattino su schermi piccoli (e magari vanno in colonna). 
+
+.item {
+  border: solid 2px black;
+  width: 33%;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  
+}
+
+.cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .item {
+    width: 100%;
+  }
+  
+} */
+
+/* 🟡 3. Aggiungi una media query
+
+Obiettivo: Applicare uno stile diverso su schermi piccoli.
+
+✅ Prendi una pagina HTML con del testo.
+🎯 Aggiungi una media query che cambia il colore del background e la dimensione del font sotto i 600px */
+
+/* body {
+  background-color: aqua;
+  font-size: 25px;
+}
+
+p {
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background-color: blue;
+    font-size: 16px;
+  }
+  
+} */
+
+/* 🟡 4. Griglia fissa vs fluida
+
+Obiettivo: Confrontare due tipi di griglia.
+
+✅ Crea due layout:
+
+    uno con width: 400px fissa per ogni colonna,
+
+    uno con width: 33.33%.
+
+🎯 Provali su desktop e mobile per vedere le differenze. 
+
+.fissa {
+  width: 400px;
+
+}
+
+.fluida {
+  width: 33%;
+
+}
+
+div > div {
+  border: solid 2px blueviolet;
+} */
+
+/* 🟡 5. Card responsive
+
+Obiettivo: Creare una card (immagine + testo) che si adatta.
+
+✅ Crea una card con immagine, titolo, descrizione.
+🎯 Imposta una griglia responsive a 2 colonne per desktop e 1 colonna per mobile con flex-wrap e media queries. 
+
+
+.cont {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+  width: 100%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .cont {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+
+  }
+  
+} */
+
+/* 🔴 6. Crea un layout a 3 sezioni + breakpoints
+
+Obiettivo: Sito con header, main e sidebar responsive.
+
+✅ Layout:
+
+    header in alto 100%
+
+    main (contenuto) e aside (barra laterale) affiancati su desktop
+
+    sovrapposti su mobile
+
+🎯 Usa flex o grid con @media (max-width: 600px) per cambiare disposizione. 
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+nav > ul  {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+nav > ul > li {
+  list-style: none;
+
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+@media (max-width: 600px) {
+  .cont {
+    flex-direction: column;
+  }
+  
+} */
+
+/* 🔴 7. Simulatore Breakpoint
+
+Obiettivo: Allenarti con più punti di rottura
+
+✅ Crea un layout con testo e sfondi colorati.
+🎯 Aggiungi 3 breakpoint:
+
+    sotto 500px → sfondo rosso
+
+    tra 500px e 900px → verde
+
+    sopra 900px → blu */
+
+    body {
+      background-color: purple; /* fallback */
+    }
+    
+    
+    @media (min-width: 901px) {
+      body {
+        background-color: blue;
+      }
+    }
+    
+    
+    @media (min-width: 501px) and (max-width: 900px) {
+      body {
+        background-color: green;
+      }
+    }
+    
+    
+    @media (max-width: 500px) {
+      body {
+        background-color: red;
+      }
+    }
+    
